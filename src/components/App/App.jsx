@@ -1,14 +1,16 @@
-import MyName from "../MyName/MyName";
+import HomePage from "../../pages/HomePage";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Привет React!</h1>
-        <p>Это мой первый React-проект с Vite.</p>
-        <MyName />
-      </div>
+      <main className="app">
+        <Header />
+        <HomePage />
+        <Footer />
+      </main>
     </>
   );
 }
