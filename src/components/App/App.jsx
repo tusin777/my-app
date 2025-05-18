@@ -1,34 +1,21 @@
-//  https://transform.tools/html-to-jsx
-
-import { Email } from "../Email";
-import MyName from "../MyName/MyName";
+import { useState } from "react";
+import Header from "../Header/Header";
+import HomePage from "../../pages/HomePage";
+import ThemeToggle from "../ThemeToggle";
+import Footer from "../Footer/Footer";
 import "./App.css";
 
 function App() {
-  const name = "Вася";
-  const element = <h1>Леха и {name} - друзья</h1>;
-  const condition = true;
-
-  const response = "<div> alert('Вы взломаны') </div>";
-
+  const [clicks, setClicks] = useState(0);
+  const [isDarkMode, setIsDarkMoge] = useState(false);
+  const [text, setText] = useState("Какой-то текст");
   return (
-    <>
-      <h1>Привет React!</h1>
-      <p>Это мой первый React-проект с Vite.</p>
-      <p>{name}</p>
-      {element}
-      {response}
-      {condition && <span>{3 + 8}</span>}
-      {condition && <MyName />}
-      <div dangerouslySetInnerHTML={{ __html: response }}></div>
-      <Email />
-      <input type="text" />
-      <input type="checkbox" checked={false} />
-      <img src="" alt="" />
-      <br />
-      <label htmlFor="eamil"></label>
-      <button disabled>Просто кнопка</button>
-    </>
+    <main className="app">
+      <Header clicks={clicks} text={text} />
+      <HomePage clicks={clicks} setClicks={setClicks} />
+      <ThemeToggle isDarkMode={isDarkMode} setIsDarkMoge={setIsDarkMoge} />
+      <Footer isDarkMode={isDarkMode} text={text} setText={setText} />
+    </main>
   );
 }
 
