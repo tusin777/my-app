@@ -1,18 +1,25 @@
 import Button from "../components/Button";
-import UserList from "../components/UserList";
 import "./HomePage.css";
-import TestComponent from "../components/TestComponent";
-import TaskList from "../components/TaskList";
 
-const HomePage = () => {
+const HomePage = ({ click }) => {
+  const handleClick = () => {
+    alert("Меня нажали");
+  };
+
+  const showMessage = () => {
+    alert("Это другое сообщение");
+  };
   return (
     <div className="home-page">
       <h2>Домашння страница</h2>
       <p>Добро пожаловать на нащ сайт!</p>
-      <Button />
-      <UserList />
-      <TestComponent />
-      <TaskList />
+      <Button
+        lable="Нажми меня"
+        onClick={() => {
+          click();
+        }}
+      />
+      <Button lable="Какое-то сообщение" onClick={showMessage} />
     </div>
   );
 };

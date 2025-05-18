@@ -4,11 +4,14 @@ import Header from "../Header/Header";
 import "./App.css";
 
 function App() {
+  const handleClick = () => {
+    alert("Меня нажали");
+  };
   return (
     <>
       <main className="app">
         <Header />
-        <HomePage />
+        <HomePage click={handleClick} />
         <Footer />
       </main>
     </>
