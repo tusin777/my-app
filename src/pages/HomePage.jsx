@@ -1,7 +1,8 @@
 import Button from "../components/Button";
 import UserList from "../components/UserList";
 import "./HomePage.css";
-import programer from "../assets/programmer.jpg";
+import TestComponent from "../components/TestComponent";
+import TaskList from "../components/TaskList";
 
 const HomePage = () => {
   return (
@@ -10,8 +11,8 @@ const HomePage = () => {
       <p>Добро пожаловать на нащ сайт!</p>
       <Button />
       <UserList />
-      <img src={programer} alt="programer" />
-      <img src="./images/laptop.jpg" alt="laptop" />
+      <TestComponent />
+      <TaskList />
     </div>
   );
 };
