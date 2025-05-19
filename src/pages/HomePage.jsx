@@ -1,7 +1,15 @@
 import "./HomePage.css";
 
 function HomePage() {
-  return <div>Домашняя страница</div>;
+  const handleScroll = ({ target }) => {
+    console.log(`прокрутка ${target.scrollTop}`);
+  };
+
+  return (
+    <div onScroll={handleScroll} style={{ height: 300, overflow: "auto" }}>
+      <div style={{ height: 900 }}>Прокучиваемый элемент</div>
+    </div>
+  );
 }
 
 export default HomePage;
