@@ -1,40 +1,20 @@
-import Greeting from "../components/Greeting";
-import Notification from "../components/Notification";
-import TodoList from "../components/TodoList";
-import WelcomeMessage from "../components/WelcomeMessage";
+// import { v4 as uuid4 } from "uuid";
+
+import UserList from "../components/UserList";
 import "./HomePage.css";
 
 function HomePage() {
-  // const messages = ["сообщения 1", "сообщение 2", "we"];
-  // const [value, setValue] = useState("");
-
-  // const todos = [
-  //   { id: 1, text: "изучить реакт", completed: true },
-  //   { id: 2, text: "создать проект", completed: false },
-  //   { id: 3, text: "написать компоненты", completed: false },
-  //   { id: 4, text: "добавить стили", completed: true },
-  //   { id: 5, text: "реализовать роутинг", completed: false },
-  //   { id: 6, text: "подключить API", completed: true },
-  //   { id: 7, text: "обработать ошибки", completed: false },
-  //   { id: 8, text: "настроить сборку", completed: true },
-  //   { id: 9, text: "оптимизировать производительность", completed: false },
-  //   { id: 10, text: "написать тесты", completed: false },
-  //   { id: 11, text: "задеплоить приложение", completed: true },
-  //   { id: 12, text: "обновить документацию", completed: false },
+  // const numbers = [1, 2, 3, 4, 5, 6, 7];
+  // const listItem = numbers.map((num) => <li key={uuid4()}>{num}</li>);
+  // return <ul>{listItem}</ul>;
+  // const users = [
+  //   { id: 1, name: "Alice" },
+  //   { id: 2, name: "Bob" },
+  //   { id: 3, name: "Charlie" },
   // ];
-
-  const isLoggedIn = false;
-
-  return (
-    <>
-      {/* <Greeting isLoggedIn={false} />
-      <Greeting isLoggedIn={true} />
-      <Notification messages={messages} />
-      <Notification messages={[]} /> */}
-      {/* <TodoList todos={todos} /> */}
-      <WelcomeMessage isLoggedIn={isLoggedIn} />
-    </>
-  );
+  // const userList = users.map((user) => <li key={user.id}>{user.name}</li>);
+  // return <ul>{userList}</ul>;
+  return <UserList />;
 }
 
 export default HomePage;
