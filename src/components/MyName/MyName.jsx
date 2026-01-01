@@ -1,7 +1,17 @@
 import "./MyName.css";
 
 const MyName = () => {
-  return <h2>Меня зовут Алексей</h2>;
+  const cats = ["Лев", "Тигр", "Пума"];
+
+  const style = { color: "blue", fontSize: 32, backgroundColor: "green" };
+
+  return (
+    <ul style={style}>
+      {cats.map((e) => (
+        <li key={e}>{e}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default MyName;
