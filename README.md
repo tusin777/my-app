@@ -1,16 +1,65 @@
-# React + Vite
+# Урок 1.4. Файловая структура проекта React / Учет регистра в Git
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Теория-резюме (по видео)
 
-Currently, two official plugins are available:
+- Цель: упростить структуру проекта, навигацию по коду и сделать приложение масштабируемым.
+- `node_modules` - все зависимости проекта, установленные через npm (или Yarn). В GitHub этой папки нет, она локальная.
+- `public` - статические файлы (favicon, шрифты и т.п.), не проходят через сборщик и используются как есть.
+- `src` - основной код проекта.
+- `components` - ключевые UI-блоки (например, Header, Footer). Каждый компонент лучше держать в своей папке вместе со стилями/хелперами/иконками/тестами.
+- `pages` - компоненты страниц (Main, About), которые собирают интерфейс из компонентов и логики.
+- `utils` - общие функции (валидация, форматирование даты/времени и т.п.).
+- `services` - логика работы с API (HTTP-запросы).
+- `hooks` - пользовательские хуки React.
+- `App.jsx` - основной компонент приложения.
+- `main.jsx` - точка входа; обычно не трогаем без необходимости (например, позже для роутинга).
+- `package.json` - зависимости и скрипты (`npm run dev`, `npm run build`, `npm run preview`).
+- `README.md` - описание проекта и инструкция по установке.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Рекомендации по структуре и именованию
 
-## React Compiler
+- Номенклатура: папки и файлы отражают сущность компонента.
+  - Пример: `Button/` -> `Button.jsx` и `Button.css`.
+- Группировка: внутри `components` можно делать подпапки по назначению (формы, layout, общие элементы, иконки, кнопки).
+- Единый стиль: названия компонентов - с заглавной буквы (PascalCase). Если несколько слов - CamelCase внутри имени, первая буква всегда заглавная.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Практическое ТЗ (повторяем за автором)
 
-## Expanding the ESLint configuration
+1. Осмотреть структуру проекта
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Открыть папки `node_modules`, `public`, `src` и посмотреть, что в них лежит.
+- В `src` проверить, что есть `components` (как в ветке автора).
+- Папки `pages`, `utils`, `services`, `hooks` в этом уроке могут отсутствовать - это ориентиры структуры на будущее.
+
+2. Осмотреть ключевые файлы
+
+- Открыть `App.jsx`, `main.jsx`, `package.json`, `README.md`.
+- Зафиксировать назначение каждого файла (как в теории выше).
+
+3. Применить правила именования
+
+- Проверить, что имена компонентов и файлов написаны в PascalCase.
+- Если нужно, привести к единому стилю (например, `MyName.jsx`, `MyName.css`).
+
+4. Публикация на GitHub (в main)
+
+- Работать в ветке `main`.
+- Сделать коммит текущего состояния и выполнить `push` в GitHub.
+- Сообщение коммита: `lesson-1.4: project structure`.
+
+5. Лайфхак про Git и регистр
+
+- Ситуация: Git может не заметить изменение регистра в названии файла (например, `MyName.jsx` -> `myname.jsx`).
+- Решение: включить учет регистра командой:
+  - `git config core.ignoreCase false`
+- После этого Git начнет фиксировать изменения регистра как настоящие изменения.
+- Вернуть правильный регистр и закоммитить.
+- Сообщение коммита (возврат правильного регистра): `lesson-1.4: fix file name case`.
+
+## Проверка
+
+- Структура соответствует ветке автора: `public`, `src`, `src/components`, `src/main.jsx`.
+- Имена компонентов и файлов в PascalCase.
+- Команда `git config core.ignoreCase false` применена (если менялся регистр).
+- Репозиторий опубликован в GitHub из ветки `main`.
+- Есть коммиты с сообщениями из шагов 4 и 5.
