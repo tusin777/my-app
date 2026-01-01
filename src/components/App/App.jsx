@@ -3,14 +3,11 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>Привет, React</h1>
-      <p>Это мой первый компонент на React. Проект запущен через Vite.</p>
-      <p>Изучаю компоненты, JSX и структуру проекта.</p>
+    <div>
+      <h1>Привет, React!</h1>
+      <p>Это мой первый React-проект с Vite</p>
       <MyName />
-      <MyName />
-      <MyName />
-    </>
+    </div>
   );
 }
 
