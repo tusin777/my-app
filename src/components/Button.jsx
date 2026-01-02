@@ -1,11 +1,6 @@
-import React from "react";
-
-const Button = () => {
+export function Button() {
   const handleClick = () => {
-    alert("Меня нажали");
+    alert("меня нажали");
   };
-
   return <button onClick={handleClick}>Кнопка</button>;
-};
-
-export default Button;
+}

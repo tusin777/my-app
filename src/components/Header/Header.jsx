@@ -1,6 +1,6 @@
 import "./Header.css";
 
-const Header = () => {
+function Header() {
   const style = {
     color: "blue",
     fontSize: "2rem",
@@ -14,6 +14,6 @@ const Header = () => {
       <h1>Заголовок</h1>
     </header>
   );
-};
+}
 
 export default Header;
