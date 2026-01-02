@@ -1,32 +1,21 @@
-import Email from "../Email";
-import MyName from "../MyName/MyName";
+import Header from "../Header/Header";
+import HomePage from "../../pages/HomePage";
+import { ThemeToggle } from "../ThemeToggle";
+import { Footer } from "../Footer/Footer";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const name = `Вася Пупкин`;
-
-  const element = <h1>Алексей и {name} - друзья</h1>;
-
-  const condition = true;
-
-  const response = "<div>alert('Вы взломаны!')</div>";
-
+  const [clicks, setClicks] = useState(5);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [text, setText] = useState("Какой-то текст");
   return (
-    <>
-      <h1>Привет, React!</h1>
-      <p>Это мой первый React-проект с Vite</p>
-      {element}
-      <div dangerouslySetInnerHTML={{ __html: response }}></div>
-      <span>{3 + 8}</span>
-      {condition && <MyName />}
-      <Email />
-      <br />
-      <input type="checkbox" checked={false} />
-      <img src="" alt="" />
-      <br />
-      <label htmlFor="email"></label>
-      <button disabled>Просто кнопка</button>
-    </>
+    <main className="app">
+      <Header clicks={clicks} text={text} />
+      <HomePage clicks={clicks} setClicks={setClicks} />
+      <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Footer isDarkMode={isDarkMode} setText={setText} text={text} />
+    </main>
   );
 }
 
