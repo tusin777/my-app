@@ -1,8 +1,7 @@
 import { Button } from "../components/Button";
-import TaskList from "../components/TaskList";
-import TextComponent from "../components/TextComponent";
 import { UserList } from "../components/UserList";
-
+import TextComponent from "../components/TextComponent";
+import { TaskList } from "../components/TaskList";
 import "./HomePage.css";
 
 function HomePage() {

@@ -1,19 +1,25 @@
 import { Component } from "react";
 
-export default class TaskList extends Component {
+export class TaskList extends Component {
   constructor(props) {
     super(props);
-    this.state = { tasks: [], newTask: "" };
+    this.state = {
+      tasks: [],
+      newTask: "",
+    };
   }
 
-  handleInputChange = (e) => {
-    this.setState({ newTask: e.target.value });
+  handleInputChange = (event) => {
+    this.setState({ newTask: event.target.value });
   };
 
   addTask = () => {
     const { tasks, newTask } = this.state;
     if (newTask.trim()) {
-      this.setState({ tasks: [...tasks, newTask], newTask: "" });
+      this.setState({
+        tasks: [...tasks, newTask],
+        newTask: "",
+      });
     }
     console.log(tasks);
   };
