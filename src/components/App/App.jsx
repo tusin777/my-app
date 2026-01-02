@@ -1,12 +1,15 @@
+import Header from "./Header/Header";
 import "./App.css";
+import Footer from "../Footer/Footer";
+import HomePage from "../../pages/HomePage";
 
 function App() {
-
-
   return (
-    <>
-      
-    </>
+    <main className="app">
+      <Header />
+      <HomePage />
+      <Footer />
+    </main>
   );
 }
 
