@@ -12,13 +12,11 @@
 //   }
 // }
 
-const ChildComponent = (props) => {
+export function ChildComponent(props) {
   return (
     <div>
       <p>Еще счетчик: {props.count}</p>
       <button onClick={props.onIncrement}>Прибавить 1</button>
     </div>
   );
-};
-
-export default ChildComponent;
+}

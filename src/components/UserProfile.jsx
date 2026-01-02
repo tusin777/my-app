@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
-export default class UserProfile extends Component {
+class UserProfile extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: "Вася", age: 22 };
+
+    this.state = {
+      name: "Вася",
+      age: 22,
+    };
   }
 
   updateName = () => {
@@ -25,3 +29,5 @@ export default class UserProfile extends Component {
     );
   }
 }
+
+export default UserProfile;

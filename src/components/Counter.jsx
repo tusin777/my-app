@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
-export default class Counter extends Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = {
+      count: 0,
+    };
   }
 
   increment = () => {
@@ -21,3 +23,5 @@ export default class Counter extends Component {
     );
   }
 }
+
+export default Counter;

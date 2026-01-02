@@ -1,10 +1,12 @@
 import { Component } from "react";
-import ChildComponent from "./ChildComponent";
+import { ChildComponent } from "./ChildComponent";
 
-export default class ParentComponent extends Component {
+class ParentComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { counts: [0, 0, 0] };
+    this.state = {
+      counts: [0, 0, 0],
+    };
   }
 
   increment = (index) => {
@@ -29,3 +31,5 @@ export default class ParentComponent extends Component {
     );
   }
 }
+
+export default ParentComponent;
