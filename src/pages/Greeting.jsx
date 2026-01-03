@@ -1,8 +1,12 @@
-import React from "react";
+// export function Greeting({ isLoggedIn }) {
+//   if (isLoggedIn) {
+//     return <h1>Добро пожаловать!</h1>;
+//   } else {
+//     return <h1>Пожалуйста, войдите в систему!</h1>;
+//   }
+// }
 
-const Greeting = ({ isLoggedIn }) => {
-  //   if (isLoggedIn) return <h1>Добро пожаловать!</h1>;
-  //   else return <h1>Пожалуйста, войдите в систему!</h1>;
+export function Greeting({ isLoggedIn }) {
   return (
     <div>
       {isLoggedIn ? (
@@ -12,6 +16,4 @@ const Greeting = ({ isLoggedIn }) => {
       )}
     </div>
   );
-};
-
-export default Greeting;
+}
