@@ -1,14 +1,10 @@
-import ControlledForm from "./ControlledForm";
-// import UncontrolledForm from "./UncontrolledForm";
-// import MixedForm from "./MixedForm";
+import RegForm from "../components/RegForm/RegForm";
 import "./HomePage.css";
 
 function HomePage() {
   return (
     <>
-      <ControlledForm />
-      {/* <UncontrolledForm />
-      <MixedForm /> */}
+      <RegForm />
     </>
   );
 }
